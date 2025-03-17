@@ -39,6 +39,10 @@ The script operates on a directory containing `.jar` files. To run it:
 ```bash
 python JarLicenseInspector.py <path_to_jars_directory>
 ```
+or
+```bash
+python3 JarLicenseInspector.py <path_to_jars_directory>
+```
 
 ### **Example**:
 ```bash
