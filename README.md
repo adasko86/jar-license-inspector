@@ -23,7 +23,7 @@ Generates a results table.
 
 The script requires Python 3.x and a few libraries. Install them using:
 
-pip install requests tabulate
+**pip install requests tabulate**
 
 
 </br>
