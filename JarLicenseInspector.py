@@ -17,7 +17,7 @@ def make_request_with_retries(url, retries=3, timeout=10):
             response.raise_for_status()  # Checks if the response was correct (status 200)
             return response
         except requests.exceptions.RequestException as e:
-            print(f"Błąd podczas pobierania {url}: {e}. Próba {attempt + 1}/{retries}.")
+            print(f"Error while retrieving {url}: {e}. Attemp {attempt + 1}/{retries}.")
             if attempt < retries - 1:
                 sleep(2)  # Wait 2 seconds before trying again
             else:
