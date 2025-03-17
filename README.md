@@ -31,7 +31,7 @@ The script requires Python 3.x and a few libraries. Install them using:
 
 The script operates on a directory containing .jar files. To run it:
 
-python JarLicenseInspector.py <path_to_directory>
+python JarLicenseInspector.py <path_to_jars_directory>
 
 Example:
 
