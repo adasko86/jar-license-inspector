@@ -88,6 +88,6 @@ Support GitHub/GitLab API for project repositories.
 
 
 </br>
-<H2>👨‍💻 Author</H2>H2>
+<H2>👨‍💻 Author</H2>
 
 Created by [adasko.86]. If you have any questions, feel free to open an issue! 😊
