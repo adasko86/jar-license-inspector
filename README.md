@@ -31,11 +31,11 @@ The script requires Python 3.x and a few libraries. Install them using:
 
 The script operates on a directory containing .jar files. To run it:
 
-python get_license.py <path_to_directory>
+python JarLicenseInspector.py <path_to_directory>
 
 Example:
 
-python get_license.py ./libs
+python JarLicenseInspector.py ./libs
 
 
 </br>
