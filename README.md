@@ -39,11 +39,17 @@ python get_license.py ./libs
 After execution, the script returns a table with results:
 
 +---------------------------+-------------------+---------+----------------------------+
+
 | JAR File                  | Artifact ID       | Version | License                     |
+
 +---------------------------+-------------------+---------+----------------------------+
+
 | commons-lang3-3.12.0.jar  | commons-lang3     | 3.12.0  | Apache License 2.0         |
+
 | asm-9.7.1.jar            | asm               | 9.7.1   | BSD License                |
+
 | no-license.jar           | no-license        | 1.0.0   | License not found          |
+
 +---------------------------+-------------------+---------+----------------------------+
 
 🛠 How It Works?
