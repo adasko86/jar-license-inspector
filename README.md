@@ -3,7 +3,7 @@
 An automatic script to retrieve licenses for JAR libraries from Maven Central Repository.
 
 </br>
-✨ ### Features
+##✨ **Features**
 
 Fetches license information based on groupId, artifactId, and version.
 
@@ -19,39 +19,53 @@ Generates a results table.
 
 
 </br>
-📥 ### Installation
+##📥 **Installation**
 
 The script requires Python 3.x and a few libraries. Install them using:
-
-**pip install requests tabulate**
+```bash
+pip install requests tabulate
+```
+or
+```bash
+pip3 install requests tabulate
+```
 
 
 </br>
-🚀 ### Usage
+##🚀 **Usage**
 
-The script operates on a directory containing .jar files. To run it:
+The script operates on a directory containing `.jar` files. To run it:
 
+```bash
 python JarLicenseInspector.py <path_to_jars_directory>
+```
 
-Example:
-
+### **Example**:
+```bash
 python JarLicenseInspector.py ./libs
+```
 
 
 </br>
-📋 ### Sample Output
-
+## 📋 **Results**
 After execution, the script returns a table with results:
 
 | JAR File                  | Artifact ID       | Version | License                    |
 |---------------------------|-------------------|---------|----------------------------|
 | commons-lang3-3.12.0.jar  | commons-lang3     | 3.12.0  | Apache License 2.0         |
-| asm-9.7.1.jar             | asm               | 9.7.1   | BSD License                |
-| no-license.jar            | no-license        | 1.0.0   | License not found          |
+| asm-9.7.1.jar            | asm               | 9.7.1   | BSD License                |
+| no-license.jar           | no-license        | 1.0.0   | !!! No License Found !!!   |
+
+Additionally, an **HTML report** will be generated, providing a detailed description of the licenses for each library. If the script does not find a license for a library, the table will display the value **"!!! No License Found !!!"**.
+
+Furthermore, a dedicated **folder will be created**, where individual files containing the extracted licenses for each library will be stored.
+
+![image](https://github.com/user-attachments/assets/05558d84-223c-4d59-8910-ac735a79abc0)
+
 
 
 </br>
-🛠 ### How It Works?
+## 🛠 **How It Works?**
 
 Finding groupId – if missing, retrieves from Maven Central.
 
@@ -63,7 +77,7 @@ Analyzing JAR file – searches for LICENSE and MANIFEST.MF.
 
 
 </br>
-🔄 ### Possible Enhancements
+##🔄 **Possible Enhancements**
 
 Retrieve licenses using SPDX API.
 
@@ -73,6 +87,6 @@ Support GitHub/GitLab API for project repositories.
 
 
 </br>
-👨‍💻 ### Author
+##👨‍💻 **Author**
 
 Created by [adasko.86]. If you have any questions, feel free to open an issue! 😊
