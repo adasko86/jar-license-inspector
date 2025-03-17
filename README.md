@@ -2,6 +2,7 @@
 
 An automatic script to retrieve licenses for JAR libraries from Maven Central Repository.
 
+
 ✨ ### Features
 
 Fetches license information based on groupId, artifactId, and version.
@@ -16,11 +17,13 @@ JAR file – checks LICENSE.txt and META-INF/MANIFEST.MF.
 
 Generates a results table.
 
+
 📥 ### Installation
 
 The script requires Python 3.x and a few libraries. Install them using:
 
 pip install requests tabulate
+
 
 🚀 ### Usage
 
@@ -31,6 +34,7 @@ python get_license.py <path_to_directory>
 Example:
 
 python get_license.py ./libs
+
 
 📋 ### Sample Output
 
@@ -52,6 +56,7 @@ Parsing pom.xml – checks the <licenses> section.
 
 Analyzing JAR file – searches for LICENSE and MANIFEST.MF.
 
+
 🔄 ### Possible Enhancements
 
 Retrieve licenses using SPDX API.
@@ -59,6 +64,7 @@ Retrieve licenses using SPDX API.
 Save results in CSV/JSON format.
 
 Support GitHub/GitLab API for project repositories.
+
 
 👨‍💻 ### Author
 
