@@ -148,15 +148,17 @@ def extract_license_from_manifest(content):
 
 def extract_artifact_and_version(filename):
     """Extracts artifactId and version from JAR filename."""
-    match = re.match(r"(.+)-(\d+\.\d+(\.\d+)?(-[\w\d]+)?)\.jar$", filename)
+    match = re.match(r"(.+)-(\d+\.\d+(\.\d+)?(-[\w\d]+)?)(.*)\.jar$", filename)
     return (match.group(1), match.group(2)) if match else (None, None)
 
 def process_jar_files_in_directory(directory):
     """Processes all .jar files in the directory and generates a table with licenses."""
     result = []
+    i = 0
     
     # Go through all the files in the directory
     for filename in os.listdir(directory):
+        i += 1
         licence_was_found_and_print = False
         if filename.endswith(".jar"):
             jar_path = os.path.join(directory, filename)
@@ -185,7 +187,10 @@ def process_jar_files_in_directory(directory):
                     print("Licence Found in JAR")
 
                 # Add the result to the table
-                result.append([filename, artifact_id, version, ", ".join(licenses)])
+                result.append([i, filename, artifact_id, version, ", ".join(licenses)])
+            else:                
+                # Add the result to the table if not found
+                result.append([i, filename, "-", "-", "!!! No Licence Found !!!"])
 
     return result
 
@@ -211,6 +216,7 @@ def generate_html_table(data):
         <h2>Licenses</h2>
         <table>
             <tr>
+                <th>Index</th>
                 <th>JAR file</th>
                 <th>Artifact ID</th>
                 <th>Version</th>
@@ -224,6 +230,7 @@ def generate_html_table(data):
                 <td>{row[1]}</td>
                 <td>{row[2]}</td>
                 <td>{row[3]}</td>
+                <td>{row[4]}</td>
             </tr>
         """
     
